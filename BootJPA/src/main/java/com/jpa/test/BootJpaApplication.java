@@ -1,5 +1,6 @@
 package com.jpa.test;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
@@ -55,24 +56,47 @@ public class BootJpaApplication {
 //		System.out.println(finaluser);
 
 		// How to get data
-		
+
 		// findById(id) - return optional containing your data
 //		Optional<User> optional = userRepository.findById(52);
-		
+
 //		Iterable<User> allUser = userRepository.findAll();
 //		allUser.forEach(user ->{
 //			System.out.println(user);
 //		});
-		
-		//Delete the object
+
+		// Delete the object
 //		
 //		userRepository.deleteById(52);
 //		System.out.println("deleted");
-		
-		
-		
-		
-		
+
+		// Spring JPA
+//		List<User> list = userRepository.findByName("Neeru");
+//		list.forEach(user ->{
+//			System.out.println(user);
+//		});
+//		
+//		List<User> temp = userRepository.findByNameAndCity("Tanu Soni","Delhi");
+//		temp.forEach(user ->{
+//			System.out.println(user);
+//		});
+
+		// Query Annotation
+//		List<User> users = userRepository.getAllUser();		
+//		users.forEach(user ->{
+//			System.out.println(user);
+//		});
+//		
+//		List<User> user1 = userRepository.getUserByName("Banti");		
+//		user1.forEach(user ->{
+//			System.out.println(user);
+//		});
+
+		List<User> users = userRepository.getUsers();
+		users.forEach(user -> {
+			System.out.println(user);
+		});
+
 	}
 
 }
