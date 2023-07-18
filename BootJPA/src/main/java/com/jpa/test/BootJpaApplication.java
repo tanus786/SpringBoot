@@ -1,12 +1,13 @@
-package com.spring.web;
+package com.jpa.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebAppApplication {
+public class BootJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebAppApplication.class, args);
+		SpringApplication.run(BootJpaApplication.class, args);
 	}
+
 }
