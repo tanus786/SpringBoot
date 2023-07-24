@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Loop</title>
+</head>
+
+<body>
+	<h1>Traversing Loop in Thymeleaf</h1>
+	<h1 th:text="${friends}"></h1>
+
+	<!--Loop-->
+
+	<li th:each="n, status : ${friends}">
+		<span th:style = "${status.even} ?'color:red':''" th:text="${status.index}+' '+${n}"></span>
+	</li>
+	<!--status.count, status.size, status.even/odd, status.first/last-->
+</body>
+
+</html>
