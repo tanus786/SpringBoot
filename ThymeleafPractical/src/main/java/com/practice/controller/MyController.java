@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 @Controller
 public class MyController {
 
@@ -20,7 +19,8 @@ public class MyController {
 		model.addAttribute("date", new Date());
 		return "about";
 	}
-	//Loop in Thymeleaf
+
+	// Loop in Thymeleaf
 	@GetMapping("/loop")
 	public String iterateHandler(Model model) {
 		List<String> list = new ArrayList<>();
@@ -28,8 +28,15 @@ public class MyController {
 		list.add("Updesh");
 		list.add("Vanshika");
 		list.add("Vaibhav");
-		model.addAttribute("friends",list);
+		model.addAttribute("friends", list);
 		return "iterate";
 	}
-	
+
+	@GetMapping("/condition")
+	public String conditionHandler(Model m) {
+		System.out.println("Conditional Handler Executed");
+		m.addAttribute("isActive", true);
+		return "condition";
+	}
+
 }
