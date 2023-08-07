@@ -49,4 +49,13 @@ public class MyController {
 		m.addAttribute("title","I like to play badminton");
 		return "fragment";
 	}
-}
+	
+	@GetMapping("/newabout")
+	public String newAbout(Model m) {
+		return "newAbout";
+	}
+	@GetMapping("/contact")
+	public String contact(Model m) {
+		return "contact";
+	}
+ }
