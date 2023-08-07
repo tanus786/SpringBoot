@@ -42,4 +42,9 @@ public class MyController {
 		return "condition";
 	}
 
+	//Handler for Fragments
+	@GetMapping("/fragment")
+	public String fragmentHandler(Model m){
+		return "fragment";
+	}
 }
