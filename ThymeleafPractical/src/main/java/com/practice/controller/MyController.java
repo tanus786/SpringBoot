@@ -36,15 +36,17 @@ public class MyController {
 	public String conditionHandler(Model m) {
 		System.out.println("Conditional Handler Executed");
 		m.addAttribute("isActive", false);
-		m.addAttribute("gender","M");
-		List<Integer> list = List.of(1,2,3,3);
-		m.addAttribute("numbers",list);
+		m.addAttribute("gender", "M");
+		List<Integer> list = List.of(1, 2, 3, 3);
+		m.addAttribute("numbers", list);
 		return "condition";
 	}
 
-	//Handler for Fragments
+	// Handler for Fragments
 	@GetMapping("/fragment")
-	public String fragmentHandler(Model m){
+	public String fragmentHandler(Model m) {
+		m.addAttribute("subtitle","It is fun game");
+		m.addAttribute("title","I like to play badminton");
 		return "fragment";
 	}
 }
