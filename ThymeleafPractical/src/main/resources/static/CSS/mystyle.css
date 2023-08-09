@@ -1,0 +1,12 @@
+body{
+	background: red;
+}
+.container{
+	background: white;
+	padding: 20px;
+}
+.profile{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
